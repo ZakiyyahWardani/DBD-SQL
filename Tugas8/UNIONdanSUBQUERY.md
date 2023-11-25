@@ -8,11 +8,11 @@ INSERT INTO skema_akademik.mahasiswa VALUES
 ```
 Memasukkan data mahasiswa ke dalam tabel `skema_akademik.mahasiswa`.
 
-![insertMhs](./Tugas8/assets/insert2mhs.png)
+![insertMhs](../Tugas8/assets/insert2mhs.png)
 
 Sehingga akan ditampilkan tabel sebagai berikut setelah dilakukan insert
 
-![tableMhs](./Tugas8/assets/tablemhsfix.png)
+![tableMhs](../Tugas8/assets/tablemhsfix.png)
 
 ### Membuat Tabel Mahasiswa Pindahan
 ```sql
@@ -29,11 +29,11 @@ CREATE TABLE skema_akademik.mahasiswa_pindahan (
     jenis_kelamin CHAR(1) CHECK (jenis_kelamin IN ('M', 'F'))
 );
 ```
-![createTableMp](./Tugas8/assets/createfix.png)
+![createTableMp](../Tugas8/assets/createfix.png)
 
 membuat tabel `skema_akademik.mahasiswa_pindahan` yang digunakan untuk menyimpan informasi mahasiswa pindahan dalam skema akademik. Tabel ini memiliki kolom-kolom, seperti `nim` sebagai primary key yang berisi identifikasi unik mahasiswa, `id_seleksi_masuk` yang merupakan foreign key terhadap tabel `skema_akademik.seleksi_masuk`, `id_program_studi` yang merupakan foreign key terhadap tabel `skema_akademik.program_studi`, `nama` untuk menyimpan nama mahasiswa, `angkatan` untuk menandakan tahun masuk mahasiswa, `tgl_lahir` untuk tanggal lahir, `kota_lahir` untuk menyimpan kota kelahiran, dan `jenis_kelamin` yang diatur oleh constraint `CHECK` untuk memastikan nilainya hanya `M` (laki-laki) atau `F` (perempuan). Tabel ini dirancang untuk mencatat data pribadi dan akademik mahasiswa pindahan.
 
-![tableMp](./Tugas8/assets/tablemp.png)
+![tableMp](../Tugas8/assets/tablemp.png)
 
 ### Insert Data Mahasiswa Pindahan
 ```sql
@@ -45,11 +45,11 @@ INSERT INTO skema_akademik.mahasiswa_pindahan VALUES
 ```
 Memasukkan data mahasiswa pindahan ke dalam tabel `skema_akademik.mahasiswa_pindahan`.
 
-![insertMp](./Tugas8/assets/insertmp.png)
+![insertMp](../Tugas8/assets/insertmp.png)
 
 Setelah dimasukkan data nya maka akan ditampilkan pada tabel seperti yang tertera berikut
 
-![tableMp2](./Tugas8/assets/tablemp2.png)
+![tableMp2](../Tugas8/assets/tablemp2.png)
 
 ### NOMOR 4
 ```sql
@@ -64,7 +64,7 @@ ORDER BY nim;
 ```
 Query ini mengambil data mahasiswa pindahan yang memiliki kota_lahir diawali `B` atau nama diawali `D`, diurutkan berdasarkan `nim`.
 
-![select1](./Tugas8/assets/select1fix.png)
+![select1](../Tugas8/assets/select1fix.png)
 
 ### NOMOR 5
 ```sql
@@ -79,7 +79,7 @@ ORDER BY nim;
 ```
 Query ini digunakan untuk mengambil data mahasiswa pindahan dengan `angkatan 2015`, kecuali yang memiliki `kota_lahir` diawali `M`, diurutkan berdasarkan `nim`.
 
-![select2](./Tugas8/assets/select2fix.png)
+![select2](../Tugas8/assets/select2fix.png)
 
 ## LATIHAN
 ### NOMOR 1
@@ -91,7 +91,7 @@ WHERE mp.nama = 'BUDI';
 ```
 Query ini digunakan untuk mengambil data mahasiswa dan mahasiswa pindahan yang memiliki `kota_lahir` yang sama dan nama `BUDI`.
 
-![select3](./Tugas8/assets/select3.png)
+![select3](../Tugas8/assets/select3.png)
 
 ### NOMOR 2
 ```sql
@@ -101,4 +101,4 @@ JOIN skema_akademik.mahasiswa_pindahan mp ON m.kota_lahir = mp.kota_lahir;
 ```
 Query ini mengambil data mahasiswa dan mahasiswa pindahan dari skema akademik yang memiliki kota_lahir yang sama.
 
-![select4](./Tugas8/assets/subquery2.png)
+![select4](../Tugas8/assets/subquery2.png)
